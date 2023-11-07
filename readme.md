@@ -1,38 +1,15 @@
 ___________________________________________________________________________________________
 STRUCTURE:
 
-solid-etl
--> dags
-    -> load_postgres.py // DAG to load data from jokes api to psql + csv
-    -> ...
--> logs
-    -> ...
--> plugins
-    -> parsers.py // functions used to parse data sources
-    -> compilers.py // functions used to compile source data into targets
-    -> helpers.py // functions used as utils
-    -> ...
--> data
-    -> json // folder to store JSONs, very poor imitation of S3/GCS
-    -> csv // folder to store CSVs, very poor imitation of S3/GCS
-    -> ...
--> sql
-    -> load_postgres // folder to store .sql queries
-        -> create_staging_table.sql
-        -> create_jokes_table.sql
-        -> ...
--> config
-    -> load_postgres.yaml // config for load_postgres DAG
-    -> ...
-
+![Screenshot from 2023-11-08 00-47-13](https://github.com/bmaxlw/solid-etl/assets/83329102/4b44b5ac-d7b7-4703-89b7-38501df92958)
 ___________________________________________________________________________________________
 RUN:
-git clone <repo>
-mkdir -p ./logs
-echo -e "AIRFLOW_UID=$(id -u)" > .env
-docker compose up airflow-init
-docker compose up
-docker compose down
+1. git clone <repo>
+2. mkdir -p ./logs
+3. echo -e "AIRFLOW_UID=$(id -u)" > .env
+4. docker compose up airflow-init
+5. docker compose up
+6. docker compose down
 
 ___________________________________________________________________________________________
 NOTES/TODO:
