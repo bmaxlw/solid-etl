@@ -1,0 +1,6 @@
+logs
+plugins/__pycache__
+dags/__pycache__
+.env
+airflow.cfg
+webserver_config.py

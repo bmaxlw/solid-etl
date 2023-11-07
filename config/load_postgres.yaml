@@ -1,0 +1,26 @@
+dev:
+  load_postgres:
+    api: 'https://official-joke-api.appspot.com/random_joke'
+    data: '/opt/airflow/data'
+    sql: '/opt/airflow/sql'
+  load_snowflake: []
+  load_redshift: []
+  load_bigquery: []
+
+qa:
+  load_postgres:
+    api: 'https://official-joke-api.appspot.com/random_joke'
+    data: '/opt/airflow/data'
+    sql: '/opt/airflow/sql'
+  load_snowflake: []
+  load_redshift: []
+  load_bigquery: []
+
+prod:
+  load_postgres:
+    api: 'https://official-joke-api.appspot.com/random_joke'
+    data: '/opt/airflow/data'
+    sql: '/opt/airflow/sql'
+  load_snowflake: []
+  load_redshift: []
+  load_bigquery: []
