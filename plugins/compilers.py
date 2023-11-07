@@ -1,6 +1,6 @@
 import os, re, json, csv
 
-# this is a bad but fast code
+# this is a bad but quick-to-push code
 def compile_sql_from_json(ti, source: str, target: str = 'staging') -> str:
     queries = []
     for _, _, files in os.walk(source):
@@ -29,4 +29,5 @@ def compile_csv_from_api(ti, target: str, key: str = 'response', task_ids: str =
         writer = csv.writer(csvf)
         writer.writerow((joke_id,joke_type,joke_setup,joke_punch))
 
-                
+# def compile_<...>_from_api(ti, ...) -> ...:
+    # ...       

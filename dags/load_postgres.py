@@ -76,6 +76,12 @@ with DAG(dag_name,
         autocommit=True
     )
 
+    # populate_<...> = <...>Operator(
+    # ... pulling xcom from get_api: 
+    # ... - any new compiler can be added to transform the pulled data
+    # ... - any new target connector can be integrated to ingest the data
+    # ) -> 
+
     drop_staging = PostgresOperator(
         task_id='drop_staging',
         sql=parser.parse_sql(f'{sql_path}/drop_staging_table.sql'),

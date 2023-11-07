@@ -29,3 +29,6 @@ def parse_api(ti, source: str, target: str) -> None:
     with open(f'{target}/av__{get_unique_time_id()}.json', 'w', encoding='utf-8') as json_file:
         json_file.write(response.text)
     ti.xcom_push(key='response', value=response.text) 
+
+# def parse_<...>(...) -> ...:
+    # ...  
